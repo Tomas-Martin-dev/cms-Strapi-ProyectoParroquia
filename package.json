@@ -16,14 +16,17 @@
     "@strapi/plugin-users-permissions": "5.10.2",
     "@strapi/provider-upload-cloudinary": "^5.10.2",
     "@strapi/strapi": "5.10.2",
+    "axios": "^1.8.2",
     "better-sqlite3": "11.3.0",
     "fs-extra": "^10.0.0",
+    "koa": "^2.15.4",
     "mime-types": "^2.1.27",
     "pg": "^8.13.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "styled-components": "^6.0.0",
+    "undici": "^6.21.1"
   },
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
