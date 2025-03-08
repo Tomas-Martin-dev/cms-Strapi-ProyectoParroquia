@@ -4,26 +4,17 @@ module.exports = {
   /**
    * An asynchronous register function that runs before
    * your application is initialized.
+   *
+   * This gives you an opportunity to extend code.
    */
   register(/*{ strapi }*/) {},
 
   /**
    * An asynchronous bootstrap function that runs before
    * your application gets started.
+   *
+   * This gives you an opportunity to set up your data model,
+   * run jobs, or perform some special logic.
    */
-  bootstrap({ strapi }) {
-    const cronTasks = require('./cron-tasks');
-    
-    // Registra cada tarea cron
-    for (const taskName in cronTasks) {
-      if (Object.prototype.hasOwnProperty.call(cronTasks, taskName)) {
-        const task = cronTasks[taskName];
-        strapi.cron.add({
-          name: taskName,
-          rule: task.options.rule,
-          task: task.task
-        });
-      }
-    }
-  }
+  bootstrap(/*{ strapi }*/) {},
 };
