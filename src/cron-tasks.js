@@ -1,18 +1,18 @@
+const axios = require('axios');
+
 module.exports = {
   myPingTask: {
     task: async ({ strapi }) => {
       try {
-        const url = 'https://cms-strapi-proyectoparroquia.onrender.com/api/hours'; 
-        const axios = require('axios');
+        const url = 'https://cms-strapi-proyectoparroquia.onrender.com/'; 
         await axios.get(url);
-        strapi.log.info('Ping enviado para mantener la instancia activa:', new Date());
+        strapi.log.info('Ping enviado para mantener la instancia activa: ' + new Date());
       } catch (error) {
-        strapi.log.error('Error al enviar el ping:', error.message);
+        strapi.log.error('Error al enviar el ping: ' + error.message);
       }
     },
     options: {
-      rule: '*/12 * * * *', // Cada 12 minutos
-    },
-  },
+      rule: '*/12 * * * *'
+    }
+  }
 };
-
