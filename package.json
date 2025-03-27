@@ -5,11 +5,9 @@
   "description": "A Strapi application",
   "scripts": {
     "build": "strapi build",
-    "deploy": "strapi deploy",
     "develop": "strapi develop",
-    "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
-    "strapi": "strapi"
+    "production": "strapi start"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.10.2",
