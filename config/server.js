@@ -11,7 +11,7 @@ module.exports = ({ env }) => ({
           try {
             console.log('Ejecutando cron job - Hora actual:', new Date().toISOString());
             // Hacer la llamada a la API
-            const response = await axios.get('https://cms-strapi-proyectoparroquia.onrender.com/api/hours');
+            const response = await axios.get(`${env('URL_STRIPE')}`);
             console.log('Respuesta de la API:', response.data);
           } catch (error) {
             console.error('Error al llamar a la API:', error.message);
